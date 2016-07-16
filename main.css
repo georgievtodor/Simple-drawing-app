@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body{
+    margin: 0;
+}
+#canvas{
+    display: block;
+}
+#toolbar {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    background-color: #cccccc;
+    color: white;
+}
+#size{
+    padding-left:10px;
+}
+#radvalue{
+    padding-right: 10px;
+}
+.radcontrol {
+    width: 30px;
+    height: 30px;
+    border:2px solid white;
+    border-radius: 15px;
+    background-color: #6f6f6f;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#radius{
+    float: left;
+}
+#colors{
+    float: right;
+}
+.swatch{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin-left: 10px;
+}
+.swatch.active{
+    border:2px solid white;
+    -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#save, #clear {
+    border-radius: 10px;
+    float: right;
+    height: 30px;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: #434343;
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#save:hover, #clear:hover{
+    background-color: #818181;
+}
