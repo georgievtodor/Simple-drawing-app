@@ -4,10 +4,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 window.onresize = function () {
-    var image = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var data = ctx.getData();
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    ctx.putImageData(image, 0, 0);
+    ctx.data = data;
 }
 
 var radius = 5;
