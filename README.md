@@ -1,1 +1,1 @@
-Simple Drawing application made with Canvas.
+Simple Drawing application made using Canvas.
