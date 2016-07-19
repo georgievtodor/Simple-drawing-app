@@ -27,23 +27,8 @@ body{
 #size{
     padding-left:10px;
 }
-#radvalue{
-    padding-right: 10px;
-}
-.radcontrol {
-    width: 30px;
-    height: 30px;
-    border:2px solid white;
-    border-radius: 15px;
-    background-color: #6f6f6f;
-    display: inline-block;
-    text-align: center;
-    padding: 5px;
-    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
-}
 #radius{
+    padding-top: 5px;
     float: left;
 }
 #colors{
@@ -92,4 +77,30 @@ body{
 }
 #colorpicker {
     /*display: none;*/
+}
+
+#radslider{
+    -webkit-appearance: none;
+}
+
+#radslider::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+#radslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+#radslider:focus {
+    outline: none;
 }

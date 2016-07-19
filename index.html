@@ -7,14 +7,14 @@
 </head>
 <body>
     <div id="toolbar">
-        <div id="radius"><div id="decradius" class="radcontrol">-</div><span id="size">Size: </span><span id="radvalue"></span><div id="incradius" class="radcontrol">+</div>
-        </div>
+        <div id="radius"><input type="range" min="1" max="40" value="5" id="radslider"><span id="size">Size: </span><span id="radvalue"></span></div>
         <div id="colors">
 
         </div>
         <div id="save">Save</div>
         <div id="clear">Clear</div>
-
+        <!--<div id="showpicker">Show/hide ColorPicker</div>-->
+        <!--<canvas width="600" height="440" id="colorpicker"></canvas>-->
     </div>
 
     <canvas id="canvas">Just be a normal human being and use Chrome/Firefox/Opera/Edge</canvas>
@@ -23,5 +23,6 @@
     <script src="js/colors.js"></script>
     <script src="js/save.js"></script>
     <script src="js/clear.js"></script>
+    <!--<script src="js/colorpicker.js"></script>-->
 </body>
 </html>
