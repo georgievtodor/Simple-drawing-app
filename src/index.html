@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas drawing app</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="toolbar">
+        <div id="radius"><input type="range" min="1" max="40" value="5" id="radslider"><span id="size">Size: </span><span id="radvalue"></span></div>
+        <div id="picker"><canvas width="256" height="256" id="colorpicker"></canvas></div>
+        <div id="colors">
+            <div id="background-color">Background color</div>
+            <div id="brush-color">Brush color</div>
+            <div class="swatch"></div>
+        </div>
+        <div id="save">Save</div>
+        <div id="clear">Clear</div>
+    </div>
+
+    <canvas id="canvas">Just be a normal human being and use Chrome/Firefox/Opera/Edge</canvas>
+    <script src="js/main.js"></script>
+    <script src="js/radius.js"></script>
+    <!--<script src="js/colors.js"></script>-->
+    <script src="js/save.js"></script>
+    <script src="js/clear.js"></script>
+    <script src="js/colorpicker.js"></script>
+</body>
+</html>
