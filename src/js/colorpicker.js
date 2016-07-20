@@ -1,8 +1,3 @@
-// var imageObj = new Image();
-// imageObj.src = 'images/colorpicker.png';
-// ctx.drawImage(imageObj, 0, 0);
-//
-
 function getMousePos(cpCanvas, evt) {
     var rect = cpCanvas.getBoundingClientRect();
     return {
@@ -19,22 +14,8 @@ function drawColor(color) {
     }
 
     if(background){
-        // var fill = ctx.fillStyle;
-
-        // var savedInstance = canvas.toDataURL();
-        // var curImg = new Image();
-        // curImg.src = savedInstance;
-        // ctx.fillStyle = color;
         canvas.style.backgroundColor = color;
         backgroundSaveColor = color;
-        // ctx.fillRect(0, 0, canvas.width, canvas.height);
-        // backgroundColor.style.backgroundColor = color;
-        // ctx.fillStyle = fill;
-        // ctx.drawImage(curImg, 0, 0);
-
-        // bgCtx.fillStyle = color;
-        // bgCtx.fillRect(0, 0, 3000, 3000);
-
     }
 
 }
@@ -49,8 +30,23 @@ function init(imageObj) {
     cpCtx.strokeStyle = '#444';
     cpCtx.lineWidth = 2;
 
-    cpCanvas.addEventListener('mousedown', function() {
+    cpCanvas.addEventListener('mousedown', function(evt) {
         mouseDown = true;
+
+        var mousePos = getMousePos(cpCanvas, evt);
+        color = undefined;
+
+        if (mousePos !== null && mousePos.x > mousePos.x < imageObj.width && mousePos.y > mousePos.y < imageObj.height) {
+
+            var x = mousePos.x;
+            var y = mousePos.y;
+            var imgData = cpCtx.getImageData(x, y, 1, 1);
+            var data = imgData.data;
+            var color = 'rgb(' + data[0] + ',' + data[1] + ',' + data[2] + ')';
+
+            drawColor(color);
+        }
+
     }, false);
 
     cpCanvas.addEventListener('mouseup', function() {
@@ -72,6 +68,7 @@ function init(imageObj) {
             drawColor(color);
         }
     }, false);
+
 
     cpCtx.drawImage(imageObj, 0, 0);
 

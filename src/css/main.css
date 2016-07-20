@@ -14,10 +14,6 @@ body{
 #canvas{
     display: block;
 }
-#picker {
-    display: inline;
-    margin-top: 50px;
-}
 #toolbar {
     width: 100%;
     height: 50px;
@@ -73,13 +69,14 @@ body{
     border-radius: 15px;
     float: left;
     display: none;
-    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    /*-webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);*/
+    /*-moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);*/
+    /*box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);*/
 }
 
 #radslider{
     -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 #radslider::-webkit-slider-runnable-track {
