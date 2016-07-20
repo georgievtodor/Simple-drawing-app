@@ -108,5 +108,7 @@ var imageObj = new Image();
 imageObj.onload = function() {
     init(this);
 };
+
+imageObj.crossOrigin = '';
 imageObj.src = 'images/colorpicker.png';
 
