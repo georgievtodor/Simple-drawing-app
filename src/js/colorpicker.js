@@ -19,17 +19,24 @@ function drawColor(color) {
     }
 
     if(background){
-        var fill = ctx.fillStyle;
+        // var fill = ctx.fillStyle;
 
-        var savedInstance = canvas.toDataURL();
-        var curImg = new Image();
-        curImg.src = savedInstance;
-        ctx.fillStyle = color;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        // var savedInstance = canvas.toDataURL();
+        // var curImg = new Image();
+        // curImg.src = savedInstance;
+        // ctx.fillStyle = color;
+        canvas.style.backgroundColor = color;
+        backgroundSaveColor = color;
+        // ctx.fillRect(0, 0, canvas.width, canvas.height);
         // backgroundColor.style.backgroundColor = color;
-        ctx.fillStyle = fill;
-        ctx.drawImage(curImg, 0, 0);
+        // ctx.fillStyle = fill;
+        // ctx.drawImage(curImg, 0, 0);
+
+        // bgCtx.fillStyle = color;
+        // bgCtx.fillRect(0, 0, 3000, 3000);
+
     }
+
 }
 function init(imageObj) {
     var cpCanvas = document.getElementById('colorpicker');
@@ -67,6 +74,7 @@ function init(imageObj) {
     }, false);
 
     cpCtx.drawImage(imageObj, 0, 0);
+
     drawColor('black');
 }
 
@@ -75,7 +83,6 @@ brushColor.style.backgroundColor = 'black';
 
 var brush = false;
 var background = false;
-var hidden = true;
 
 
 var cvs = document.querySelector('#colorpicker');
@@ -92,6 +99,7 @@ brushButton.addEventListener('mousedown', function () {
 });
 
 var backgroundButton = document.getElementById('background-color');
+var backgroundSaveColor;
 
 backgroundButton.addEventListener('mousedown', function () {
     cvs.style.display = 'none';
@@ -102,11 +110,11 @@ backgroundButton.addEventListener('mousedown', function () {
     brush = false;
 });
 
-
-
 var imageObj = new Image();
 imageObj.onload = function() {
     init(this);
 };
+
+imageObj.crossOrigin = '';
 imageObj.src = 'images/colorpicker.png';
 

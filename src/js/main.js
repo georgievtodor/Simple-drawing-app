@@ -2,6 +2,7 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 window.onresize = function () {
     var data = ctx.getData();
