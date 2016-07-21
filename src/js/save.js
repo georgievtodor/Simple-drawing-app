@@ -16,9 +16,6 @@ saveButton.onclick = function () {
 
     data = canvas.toDataURL();
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(savedImage, 0, 0);
-
     var a = document.createElement('a');
 
     a.href = data;
@@ -29,4 +26,8 @@ saveButton.onclick = function () {
 
     a.click();
     a.remove();
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.drawImage(savedImage, 0, 0);
 };
